@@ -40,7 +40,7 @@ public class FareDto {
         return price;
     }
 
-    public class ApplicationDateRange {
+    public static class ApplicationDateRange {
 
         private final Date startDate;
         private final Date endDate;
@@ -60,7 +60,7 @@ public class FareDto {
 
     }
 
-    public class Price {
+    public static class Price {
 
         private final double value;
         private final String currency;

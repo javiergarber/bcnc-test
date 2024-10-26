@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS PRICES;
 create table PRICES  (
     BRAND_ID int,
     START_DATE timestamp,

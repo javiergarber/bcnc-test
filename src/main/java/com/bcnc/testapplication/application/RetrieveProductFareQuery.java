@@ -27,7 +27,19 @@ public class RetrieveProductFareQuery {
     }
 
     public enum Brand {
-        ZARA
+        ZARA(1);
+
+        private final long id;
+
+        Brand(long id) {
+            this.id=id;
+        }
+
+        public long getId(){
+            return id;
+        }
+
+
     }
 }
 

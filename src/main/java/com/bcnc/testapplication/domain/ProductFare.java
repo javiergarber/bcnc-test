@@ -76,40 +76,40 @@ public class ProductFare {
 
     public static class FareId {
 
-        private final long fareId;
+        private final long id;
 
-        public long getFareId() {
-            return fareId;
+        public FareId(long id) {
+            this.id = id;
         }
 
-        public FareId(long fareId) {
-            this.fareId = fareId;
+        public long getId() {
+            return id;
         }
     }
 
     public static class BrandId {
 
-        private final long brandId;
+        private final long id;
 
-        public long getBrandId() {
-            return brandId;
+        public long getId() {
+            return id;
         }
 
         public BrandId(long brandId) {
-            this.brandId = brandId;
+            this.id = brandId;
         }
     }
 
     public static class ProductId {
 
-        private final long productId;
+        private final long id;
 
-        public long getProductId() {
-            return productId;
+        public long getId() {
+            return id;
         }
 
-        public ProductId(long productId) {
-            this.productId = productId;
+        public ProductId(long id) {
+            this.id = id;
         }
     }
 }
