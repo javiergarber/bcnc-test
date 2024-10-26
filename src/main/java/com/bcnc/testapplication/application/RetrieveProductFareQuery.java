@@ -32,11 +32,20 @@ public class RetrieveProductFareQuery {
         private final long id;
 
         Brand(long id) {
-            this.id=id;
+            this.id = id;
         }
 
-        public long getId(){
+        public long getId() {
             return id;
+        }
+
+        public static Brand fromId(long id) {
+            for (Brand brand : Brand.values()) {
+                if (brand.getId() == id) {
+                    return brand;
+                }
+            }
+            throw new IllegalArgumentException("Brand not found for id: " + id);
         }
 
 
