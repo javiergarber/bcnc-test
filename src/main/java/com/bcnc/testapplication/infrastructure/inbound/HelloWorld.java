@@ -1,4 +1,4 @@
-package com.bcnc.test.infrastructure.inbound;
+package com.bcnc.testapplication.infrastructure.inbound;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

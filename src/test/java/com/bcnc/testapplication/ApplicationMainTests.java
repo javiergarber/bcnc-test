@@ -1,4 +1,4 @@
-package com.bcnc.test;
+package com.bcnc.testapplication;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
