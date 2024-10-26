@@ -24,8 +24,8 @@ class RetrieveProductFareActionTest {
         RetrieveProductFareQuery query = new RetrieveProductFareQuery(date, 35455, RetrieveProductFareQuery.Brand.ZARA);
         FareDto fareDto = getFareDto(query);
 
-        Assertions.assertEquals(1, fareDto.getFareId());
-        Assertions.assertEquals(35.50, fareDto.getPrice().getValue());
+        Assertions.assertEquals(1, fareDto.fareId());
+        Assertions.assertEquals(35.50, fareDto.price().value());
     }
 
     @Test
@@ -34,8 +34,8 @@ class RetrieveProductFareActionTest {
         RetrieveProductFareQuery query = new RetrieveProductFareQuery(date, 35455, RetrieveProductFareQuery.Brand.ZARA);
         FareDto fareDto = getFareDto(query);
 
-        Assertions.assertEquals(2, fareDto.getFareId());
-        Assertions.assertEquals(25.45, fareDto.getPrice().getValue());
+        Assertions.assertEquals(2, fareDto.fareId());
+        Assertions.assertEquals(25.45, fareDto.price().value());
     }
 
     @Test
@@ -44,8 +44,8 @@ class RetrieveProductFareActionTest {
         RetrieveProductFareQuery query = new RetrieveProductFareQuery(date, 35455, RetrieveProductFareQuery.Brand.ZARA);
         FareDto fareDto = getFareDto(query);
 
-        Assertions.assertEquals(1, fareDto.getFareId());
-        Assertions.assertEquals(35.50, fareDto.getPrice().getValue());
+        Assertions.assertEquals(1, fareDto.fareId());
+        Assertions.assertEquals(35.50, fareDto.price().value());
     }
 
     @Test
@@ -54,8 +54,8 @@ class RetrieveProductFareActionTest {
         RetrieveProductFareQuery query = new RetrieveProductFareQuery(date, 35455, RetrieveProductFareQuery.Brand.ZARA);
         FareDto fareDto = getFareDto(query);
 
-        Assertions.assertEquals(3, fareDto.getFareId());
-        Assertions.assertEquals(30.50, fareDto.getPrice().getValue());
+        Assertions.assertEquals(3, fareDto.fareId());
+        Assertions.assertEquals(30.50, fareDto.price().value());
     }
 
     @Test
@@ -64,8 +64,8 @@ class RetrieveProductFareActionTest {
         RetrieveProductFareQuery query = new RetrieveProductFareQuery(date, 35455, RetrieveProductFareQuery.Brand.ZARA);
         FareDto fareDto = getFareDto(query);
 
-        Assertions.assertEquals(4, fareDto.getFareId());
-        Assertions.assertEquals(38.95, fareDto.getPrice().getValue());
+        Assertions.assertEquals(4, fareDto.fareId());
+        Assertions.assertEquals(38.95, fareDto.price().value());
     }
 
     private FareDto getFareDto(RetrieveProductFareQuery query) {

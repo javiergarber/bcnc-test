@@ -24,9 +24,9 @@ public class RetrieveProductFareAction {
         validateInput(query);
 
         List<ProductFare> fares = productFareRepository.getFaresForProductByDateAndBrandId(
-            query.getApplicationDate(),
-            query.getProductId(),
-            query.getBrand().getId());
+            query.applicationDate(),
+            query.productId(),
+            query.brand().getId());
 
         if (fares.isEmpty()) {
             return Optional.empty();
@@ -37,26 +37,26 @@ public class RetrieveProductFareAction {
             return Optional.of(mapToDto(fare));
         }
 
-        ProductFare maxPriorityFare = fares.stream().max(Comparator.comparing(ProductFare::getPriority)).get();
+        ProductFare maxPriorityFare = fares.stream().max(Comparator.comparing(ProductFare::priority)).get();
         return Optional.of(mapToDto(maxPriorityFare));
     }
 
     private FareDto mapToDto(ProductFare fare) {
-        return new FareDto(fare.getProductId().getId(),
-            fare.getBrandId().getId(),
-            fare.getFareId().getId(),
-            new FareDto.ApplicationDateRange(fare.getStartDate(), fare.getEndDate()),
-            new Price(fare.getPrice().getValue(), fare.getPrice().getCurrency()));
+        return new FareDto(fare.productId().id(),
+            fare.brandId().id(),
+            fare.fareId().id(),
+            new FareDto.ApplicationDateRange(fare.startDate(), fare.endDate()),
+            new Price(fare.price().value(), fare.price().currency()));
     }
 
     private void validateInput(RetrieveProductFareQuery query) {
         if (query == null) {
             throw new InvalidParameterException("Query cannot be null");
         }
-        if (query.getApplicationDate() == null) {
+        if (query.applicationDate() == null) {
             throw new InvalidParameterException("Application date cannot be null");
         }
-        if (query.getBrand() == null) {
+        if (query.brand() == null) {
             throw new InvalidParameterException("Brand Id cannot be null");
         }
     }

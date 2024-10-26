@@ -45,14 +45,14 @@ public class ProductFaresController {
 
     private ResponseEntity<FareResponse> ok(FareDto fareDto) {
         FareResponse fareResponse = new FareResponse();
-        fareResponse.productId = fareDto.getProductId();
-        fareResponse.brandId = fareDto.getBrandId();
-        fareResponse.fareId = fareDto.getFareId();
-        fareResponse.startDate = fareDto.getApplicationDateRange().getStartDate();
-        fareResponse.endDate = fareDto.getApplicationDateRange().getEndDate();
+        fareResponse.productId = fareDto.productId();
+        fareResponse.brandId = fareDto.brandId();
+        fareResponse.fareId = fareDto.fareId();
+        fareResponse.startDate = fareDto.applicationDateRange().startDate();
+        fareResponse.endDate = fareDto.applicationDateRange().endDate();
         FareResponse.Price price = new FareResponse.Price();
-        price.value = fareDto.getPrice().getValue();
-        price.currency = fareDto.getPrice().getCurrency();
+        price.value = fareDto.price().value();
+        price.currency = fareDto.price().currency();
         fareResponse.price = price;
         return ResponseEntity.ok(fareResponse);
     }

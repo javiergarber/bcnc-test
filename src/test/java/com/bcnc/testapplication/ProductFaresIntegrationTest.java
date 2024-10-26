@@ -18,14 +18,13 @@ import org.springframework.transaction.annotation.Transactional;
 @AutoConfigureMockMvc
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.ANY)
 @Transactional
-public class ProductFaresIntegrationTest {
+class ProductFaresIntegrationTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @Autowired
     private RetrieveProductFareAction retrieveProductFareAction;
-
 
 
     @Test
