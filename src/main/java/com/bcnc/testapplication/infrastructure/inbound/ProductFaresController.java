@@ -36,10 +36,10 @@ public class ProductFaresController {
                 Brand.fromId(brandId)));
         return optionalFareDto
             .map(this::ok)
-            .orElseGet(this::emptyFareResponse);
+            .orElseGet(this::notFound);
     }
 
-    private ResponseEntity<FareResponse> emptyFareResponse() {
+    private ResponseEntity<FareResponse> notFound() {
         return ResponseEntity.notFound().build();
     }
 
